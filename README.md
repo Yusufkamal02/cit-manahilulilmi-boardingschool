@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Website Publik — SMP-SMK CIT Manahilulilmi Boarding School
 
-## Getting Started
+Dibangun dengan Next.js dari desain acuan di `../Web_Design_Public_Access/`.
 
-First, run the development server:
+## Menjalankan
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # mode pengembangan → http://localhost:3000
+npm run build && npm run start   # mode produksi
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Mengubah konten
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Semua teks, angka, biaya, kontak, dan foto ada di **`src/content/site.ts`**.
+Isinya masih **contoh** dan wajib diganti dengan data resmi sebelum dipublikasikan:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `school.whatsapp`: nomor WhatsApp admin PPDB (format `62…`, tanpa `+`)
+- `school.mapsEmbedUrl`: URL embed Google Maps (Bagikan → Sematkan peta → salin `src`)
+- `fees`: nominal biaya pendaftaran, uang pangkal, SPP
+- Foto: saat ini memakai foto ilustrasi Unsplash, ganti dengan foto asli sekolah
 
-## Learn More
+## Struktur
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/page.tsx`: susunan seluruh bagian halaman
+- `src/app/globals.css`: gaya visual, warna tema terang & gelap (token di `:root`)
+- `src/components/`: header, hero slider, tema, formulir WhatsApp, bagian interaktif
