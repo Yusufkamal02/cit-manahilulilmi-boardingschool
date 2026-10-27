@@ -418,14 +418,7 @@ export default function Home() {
                     <b>{school.phone}</b>
                   </div>
                 </a>
-                <a className="contact-item reveal" style={i(3)} href={school.website} target="_blank" rel="noopener noreferrer">
-                  <span className="ico" aria-hidden="true">🌐</span>
-                  <div>
-                    <small>Website</small>
-                    <b>{school.websiteDisplay}</b>
-                  </div>
-                </a>
-                <div className="contact-item reveal" style={i(4)}>
+                <div className="contact-item reveal" style={i(3)}>
                   <span className="ico" aria-hidden="true">🕘</span>
                   <div>
                     <small>Jam layanan</small>
@@ -511,9 +504,6 @@ export default function Home() {
               <p>{school.address}</p>
               <a href={`https://wa.me/${school.whatsapp}`} target="_blank" rel="noopener noreferrer">
                 WA {school.whatsappDisplay}
-              </a>
-              <a href={school.website} target="_blank" rel="noopener noreferrer">
-                {school.websiteDisplay}
               </a>
             </div>
           </div>

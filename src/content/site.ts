@@ -18,8 +18,6 @@ export const school = {
   whatsappDisplay: "0812-9259-8618",
   // Nomor kedua (dari poster PPDB).
   phone: "0812-1982-0431",
-  website: "https://manahilulilmi.or.id",
-  websiteDisplay: "manahilulilmi.or.id",
   address: "Kp. Mulyasari, Desa Karyasari, RT 01/RW 03, Kec. Leuwiliang, Kabupaten Bogor, Jawa Barat 16640",
   // CONTOH — belum ada data resmi.
   officeHours: "Senin–Sabtu, 08.00–16.00 WIB",
