@@ -530,7 +530,7 @@ p { text-wrap: pretty }
 /* ========================= programs ========================= */
 .program-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px }
 .level-switch {
-  position: relative; display: inline-grid; grid-template-columns: 1fr 1fr; padding: 5px; gap: 0;
+  position: relative; display: inline-grid; grid-template-columns: repeat(var(--n, 2), 1fr); padding: 5px; gap: 0;
   background: var(--surface-2); border: 1px solid var(--border); border-radius: 14px; margin-top: 34px;
 }
 .level-switch button {
@@ -539,10 +539,10 @@ p { text-wrap: pretty }
 }
 .level-switch button[aria-selected="true"] { color: #fff }
 .level-switch .thumb {
-  position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc(50% - 5px); border-radius: 10px;
+  position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc((100% - 10px) / var(--n, 2)); border-radius: 10px;
   background: var(--brand); box-shadow: 0 8px 18px #1f804040; transition: transform .45s var(--ease);
+  transform: translateX(calc(var(--idx, 0) * 100%));
 }
-.level-switch[data-level="1"] .thumb { transform: translateX(100%) }
 .level-intro { font-size: 13px; color: var(--text-muted); margin: 14px 0 0; font-weight: 600 }
 
 .tabs { display: flex; align-items: center; gap: 8px; overflow: auto; scrollbar-width: none; padding: 3px; margin-top: 18px }
@@ -697,6 +697,7 @@ p { text-wrap: pretty }
 .fee-table td:first-child { text-align: left; color: var(--text-muted); font-weight: 600 }
 .fee-table td s { color: var(--text-soft); font-weight: 600 }
 .fee-table td.promo { color: var(--brand-ink); font-weight: 900; font-size: 15px }
+.fee-table td.ask { color: var(--brand-ink); font-weight: 800 }
 .fee-table td.promo small { display: block; margin-top: 3px; font-size: 10.5px; font-weight: 800; color: var(--text-muted) }
 .fee-extras { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px }
 .fee-extras li { padding: 7px 12px; border-radius: 99px; background: var(--brand-soft); color: var(--brand-ink); font-size: 12px; font-weight: 800 }

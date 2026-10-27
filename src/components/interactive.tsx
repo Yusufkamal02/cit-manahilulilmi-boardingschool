@@ -18,6 +18,13 @@ import { LeadButton } from "./lead";
 
 const rupiah = (n: number) => "Rp" + n.toLocaleString("id-ID");
 
+// Pilihan formulir yang terisi otomatis saat tombol "Diskusikan Program" diklik.
+const leadProgram: Record<string, string> = {
+  SMP: "SMP IT Boarding",
+  SMK: "SMK — Rekayasa Perangkat Lunak",
+  Tahfidz: "Sekolah Tahfidz (30 Juz)",
+};
+
 /* ---------------------------- Program per jenjang ---------------------------- */
 export function Programs() {
   const [level, setLevel] = useState(1);
@@ -37,7 +44,12 @@ export function Programs() {
 
   return (
     <>
-      <div className="level-switch reveal" role="tablist" aria-label="Pilih jenjang" data-level={level}>
+      <div
+        className="level-switch reveal"
+        role="tablist"
+        aria-label="Pilih jenjang"
+        style={{ "--idx": level, "--n": programs.length } as React.CSSProperties}
+      >
         <span className="thumb" aria-hidden="true" />
         {programs.map((g, i) => (
           <button
@@ -92,7 +104,7 @@ export function Programs() {
           </div>
           <LeadButton
             className="btn btn-white anim-in"
-            program={group.level === "SMP" ? "SMP IT Boarding" : `SMK — ${p.tab}`}
+            program={leadProgram[group.level]}
           >
             Diskusikan Program <span className="arrow">↗</span>
           </LeadButton>
@@ -313,13 +325,21 @@ export function Fees() {
             {f.rows.map((r) => (
               <tr key={r.level}>
                 <td>{r.level}</td>
-                <td>
-                  <s>{rupiah(r.normal)}</s>
-                </td>
-                <td className="promo">
-                  {rupiah(r.promo)}
-                  <small>Hemat {rupiah(r.normal - r.promo)}</small>
-                </td>
+                {r.normal && r.promo ? (
+                  <>
+                    <td>
+                      <s>{rupiah(r.normal)}</s>
+                    </td>
+                    <td className="promo">
+                      {rupiah(r.promo)}
+                      <small>Hemat {rupiah(r.normal - r.promo)}</small>
+                    </td>
+                  </>
+                ) : (
+                  <td colSpan={2} className="ask">
+                    Hubungi admin
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>

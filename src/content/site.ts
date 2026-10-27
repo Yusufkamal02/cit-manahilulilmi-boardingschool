@@ -86,6 +86,7 @@ export const ticker = [
   "IOT ROBOTICS",
   "SERTIFIKASI INTERNASIONAL",
   "DINIYYAH & TAHFIDZ",
+  "SEKOLAH TAHFIDZ 30 JUZ",
   "BOARDING PUTRA",
 ];
 
@@ -103,7 +104,7 @@ export const about = {
   alt: "Masjid CIT Manahilul Ilmi",
   points: ["Pembelajaran teknologi", "Tahfidz & diniyah", "Kehidupan berasrama", "Karya & portofolio"],
   stats: [
-    { value: 2, suffix: "", label: "Jenjang" },
+    { value: 3, suffix: "", label: "Jenjang" },
     { value: 5, suffix: " ha", label: "Luas lahan" },
     { value: 10, suffix: "+", label: "Fasilitas" },
     { value: 24, suffix: " jam", label: "Pembinaan asrama" },
@@ -129,7 +130,7 @@ export type Program = {
   image: string;
 };
 
-export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }[] = [
+export const programs: { level: "SMP" | "SMK" | "Tahfidz"; intro: string; items: Program[] }[] = [
   {
     level: "SMP",
     intro: "SMP IT Boarding — 3 tahun, fondasi akhlak, akademik, dan literasi digital.",
@@ -205,6 +206,39 @@ export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }
       },
     ],
   },
+  {
+    level: "Tahfidz",
+    intro: "Sekolah Tahfidz — 3 tahun (6 semester), usia setara SMP–SMA (±12–18 th), fokus tahfidz & diniyyah. Lulusan mendapat ijazah tahfidz & sertifikat (bukan ijazah sekolah formal).",
+    items: [
+      {
+        tab: "Tahfidz 30 Juz Mutqin",
+        label: "SEKOLAH TAHFIDZ • 30 JUZ",
+        title: "Menghafal 30 juz dengan hafalan yang kuat dan terjaga.",
+        desc: "Setoran ziyadah dan muraja'ah harian, tahsin, serta ujian per juz. Lulusan mendapat ijazah tahfidz dan sertifikat, serta sanad bagi yang mengajukan dan dinyatakan lulus.",
+        perks: ["Target 30 juz mutqin", "Ujian per juz", "Ijazah, sertifikat & sanad"],
+        stamp: "Hafidz Qur'an.",
+        image: u("photo-1609599006353-e629aaabfeae", 850),
+      },
+      {
+        tab: "Diniyyah",
+        label: "SEKOLAH TAHFIDZ • DINIYYAH",
+        title: "Memahami agama sebagai bekal hidup.",
+        desc: "Kajian aqidah, fiqih, dan adab serta bahasa Arab dasar, dibimbing langsung oleh asatidz dan musyrif.",
+        perks: ["Aqidah & fiqih", "Adab", "Bahasa Arab dasar"],
+        stamp: "Ilmu & Adab.",
+        image: u("photo-1585036156171-384164a8c675", 850),
+      },
+      {
+        tab: "Ekskul IT, IoT & Robotics",
+        label: "SEKOLAH TAHFIDZ • EKSKUL",
+        title: "Tetap melek teknologi di sela hafalan.",
+        desc: "Ekstrakurikuler khusus santri Sekolah Tahfidz: coding dasar, Internet of Things, dan robotika, dijadwalkan di luar jam tahfidz.",
+        perks: ["Coding dasar", "Internet of Things", "Robotics"],
+        stamp: "Qur'an & Tech.",
+        image: "/foto/lab-iot.jpg",
+      },
+    ],
+  },
 ];
 
 export const activities = [
@@ -277,7 +311,10 @@ export const workFilters = [
 ];
 
 // Harga resmi PPDB 2027/2028. Harga promo berlaku untuk pendaftar Gelombang 1.
-export const fees = [
+// Baris tanpa harga ditampilkan "Hubungi admin".
+type FeeRow = { level: string; normal?: number; promo?: number };
+
+export const fees: { tab: string; title: string; desc: string; rows: FeeRow[]; notes: string[] }[] = [
   {
     tab: "Uang Pangkal",
     title: "Uang Pangkal",
@@ -285,6 +322,7 @@ export const fees = [
     rows: [
       { level: "SMP", normal: 15_000_000, promo: 13_000_000 },
       { level: "SMK", normal: 20_000_000, promo: 15_000_000 },
+      { level: "Sekolah Tahfidz" },
     ],
     notes: ["Termasuk asrama (ranjang, kasur, lemari), 3 seragam, buku, dan berbagai fasilitas lainnya", "Uang pangkal bisa dicicil"],
   },
@@ -295,6 +333,7 @@ export const fees = [
     rows: [
       { level: "SMP", normal: 2_000_000, promo: 1_500_000 },
       { level: "SMK", normal: 2_500_000, promo: 2_000_000 },
+      { level: "Sekolah Tahfidz" },
     ],
     notes: ["Termasuk makan 3x sehari", "Termasuk laundry pakaian 2x sepekan"],
   },
@@ -336,16 +375,17 @@ export const testimonials = [
 
 export const news = [
   { date: "2026-10-20", dateLabel: "20 Okt 2026", category: "Prestasi", title: "Tim Robotik CIT Raih Juara 2 Lomba Robot Tingkat Provinsi", excerpt: "Santri SMK berhasil membawa pulang medali perak dalam kategori line follower.", image: u("photo-1561557944-6e7860d1a7eb", 750) },
-  { date: "2026-10-12", dateLabel: "12 Okt 2026", category: "PPDB", title: "PPDB 2027/2028 Gelombang 1 Resmi Dibuka", excerpt: "Pendaftaran santri baru (putra) jenjang SMP dan SMK dibuka Oktober–Desember 2026 dengan promo uang pangkal dan SPP.", image: u("photo-1427504494785-3a9ca7044f45", 750) },
+  { date: "2026-10-12", dateLabel: "12 Okt 2026", category: "PPDB", title: "PPDB 2027/2028 Gelombang 1 Resmi Dibuka", excerpt: "Pendaftaran santri baru (putra) jenjang SMP, SMK, dan Sekolah Tahfidz dibuka Oktober–Desember 2026 dengan promo uang pangkal dan SPP.", image: u("photo-1427504494785-3a9ca7044f45", 750) },
   { date: "2026-10-03", dateLabel: "3 Okt 2026", category: "Kegiatan", title: "Wisuda Tahfidz Angkatan Ke-5", excerpt: "Sebanyak 42 santri menuntaskan target hafalan dan diwisuda di hadapan orang tua.", image: u("photo-1609599006353-e629aaabfeae", 750) },
 ];
 
 export const faqs = [
   { q: "Apa yang menjadi fokus pembelajaran CIT?", a: "Perpaduan pendidikan teknologi (pemrograman, AI, Data Science, IoT & robotika), program tahfidz dan diniyyah, serta pembinaan karakter dan kemandirian dalam kehidupan berasrama." },
-  { q: "Apakah sekolah ini menerima santri putri?", a: "Saat ini CIT Manahilul Ilmi khusus menerima santri putra untuk jenjang SMP dan SMK." },
+  { q: "Apakah sekolah ini menerima santri putri?", a: "Saat ini CIT Manahilul Ilmi khusus menerima santri putra untuk jenjang SMP, SMK, dan Sekolah Tahfidz." },
+  { q: "Apa itu Sekolah Tahfidz?", a: "Program 3 tahun (6 semester) untuk santri usia setara SMP–SMA yang ingin fokus menghafal Al-Qur'an dan belajar diniyyah, dengan target 30 juz mutqin. Lulusan mendapat ijazah tahfidz dan sertifikat, serta sanad bagi yang mengajukan dan dinyatakan lulus. Program ini tidak memberikan ijazah sekolah formal. Santri juga bisa mengikuti ekskul IT, IoT & Robotics." },
   { q: "Apakah semua santri wajib tinggal di asrama?", a: "Ya. Seluruh santri tinggal di asrama putra yang dilengkapi ranjang, kasur, dan lemari, dengan makan 3x sehari dan laundry 2x sepekan." },
   { q: "Jurusan apa saja yang tersedia di SMK?", a: "Saat ini SMK membuka satu jurusan, yaitu Rekayasa Perangkat Lunak (RPL), dengan materi AI & Machine Learning, Data Science, NLP, Computer Vision, AI Apps, dan IoT Robotics. Santri SMK juga mengikuti program akademik terpadu serta tahfidz & diniyyah." },
-  { q: "Berapa biaya masuk dan SPP bulanan?", a: "Promo Gelombang 1: uang pangkal SMP Rp13 juta (normal Rp15 juta) dan SMK Rp15 juta (normal Rp20 juta); SPP SMP Rp1,5 juta/bulan (normal Rp2 juta) dan SMK Rp2 juta/bulan (normal Rp2,5 juta). Uang pangkal bisa dicicil dan tersedia keringanan biaya." },
+  { q: "Berapa biaya masuk dan SPP bulanan?", a: "Promo Gelombang 1: uang pangkal SMP Rp13 juta (normal Rp15 juta) dan SMK Rp15 juta (normal Rp20 juta); SPP SMP Rp1,5 juta/bulan (normal Rp2 juta) dan SMK Rp2 juta/bulan (normal Rp2,5 juta). Biaya Sekolah Tahfidz silakan hubungi admin PPDB. Uang pangkal bisa dicicil dan tersedia keringanan biaya." },
   { q: "Apakah menerima murid pindahan?", a: "Ya, sekolah menerima murid pindahan. Hubungi admin PPDB untuk informasi persyaratannya." },
   { q: "Kapan orang tua bisa menjenguk santri?", a: "Kunjungan dapat dilakukan pada jadwal kunjungan yang ditetapkan asrama, umumnya satu kali dalam sebulan." },
   { q: "Bagaimana cara mendaftar?", a: "Klik tombol Daftar Sekarang, isi data singkat, lalu Anda akan terhubung dengan admin PPDB melalui WhatsApp untuk langkah berikutnya." },
@@ -354,5 +394,6 @@ export const faqs = [
 export const programOptions = [
   "SMP IT Boarding",
   "SMK — Rekayasa Perangkat Lunak",
+  "Sekolah Tahfidz (30 Juz)",
   "Belum tahu, ingin konsultasi",
 ];

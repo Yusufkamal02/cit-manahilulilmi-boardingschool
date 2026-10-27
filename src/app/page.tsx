@@ -178,7 +178,7 @@ export default function Home() {
                   <br />
                   untuk masa depanmu.
                 </h2>
-                <p className="section-lead">Dua jenjang berasrama, satu tujuan: generasi Qur&apos;ani yang menguasai teknologi.</p>
+                <p className="section-lead">Tiga jenjang berasrama, satu tujuan: generasi Qur&apos;ani yang menguasai teknologi.</p>
               </div>
               <a className="text-link" href="#karya">
                 Lihat karya santri <span className="arrow">↗</span>
@@ -471,7 +471,7 @@ export default function Home() {
               </div>
               <Brand footer />
               <p className="footer-description">
-                Boarding school SMP & SMK yang memadukan pendidikan teknologi informasi, IoT & robotika, tahfidz Al-Qur&apos;an, dan pembinaan
+                Boarding school SMP, SMK & Sekolah Tahfidz yang memadukan pendidikan teknologi informasi, IoT & robotika, tahfidz Al-Qur&apos;an, dan pembinaan
                 karakter.
               </p>
               <div className="socials">
