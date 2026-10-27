@@ -28,12 +28,6 @@ export default function Home() {
       </a>
       <ScrollEffects />
 
-      {school.isPreview && (
-        <div className="preview-ribbon" role="note">
-          <b>VERSI PRATINJAU</b> — Sebagian teks dan foto masih contoh dan akan diganti dengan data resmi sekolah.
-        </div>
-      )}
-
       <div className="topline">
         <div className="container topline-inner">
           <div>
