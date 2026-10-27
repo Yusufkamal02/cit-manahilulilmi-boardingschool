@@ -1,6 +1,6 @@
 // Seluruh konten website publik.
 // Data resmi (dari poster & info PPDB 2027/2028): identitas, kontak, alamat, peta, biaya,
-// gelombang PPDB, keunggulan, dan fasilitas. Sisanya (program/jurusan, ekskul, jadwal,
+// gelombang PPDB, keunggulan, fasilitas, dan jurusan SMK (RPL). Sisanya (deskripsi program, ekskul, jadwal,
 // karya, testimoni, berita, visi-misi, sebagian foto) masih CONTOH dan harus diganti.
 // Nantinya konten ini dipindahkan ke CMS agar bisa diubah tanpa menyentuh kode.
 
@@ -144,11 +144,11 @@ export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }
         image: "/foto/kelas-presentasi.jpg",
       },
       {
-        tab: "Tahfidz & Diniyah",
+        tab: "Tahfidz & Diniyyah",
         label: "SMP • TAHFIDZ",
         title: "Tumbuh bersama Al-Qur'an setiap hari.",
         desc: "Setoran hafalan harian, tahsin, serta kajian aqidah, fiqih, dan adab yang dibimbing langsung oleh musyrif.",
-        perks: ["Target hafalan", "Tahsin", "Kajian diniyah"],
+        perks: ["Target hafalan", "Tahsin", "Kajian diniyyah"],
         stamp: "Qur'an First.",
         image: u("photo-1609599006353-e629aaabfeae", 850),
       },
@@ -165,34 +165,34 @@ export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }
   },
   {
     level: "SMK",
-    intro: "SMK TI Boarding — 3 tahun, kompetensi vokasi teknologi siap kerja, kuliah, dan wirausaha.",
+    intro: "SMK TI Boarding — 3 tahun, jurusan Rekayasa Perangkat Lunak (RPL), siap kerja, siap kuliah, atau kerja sambil kuliah.",
     items: [
       {
         tab: "Rekayasa Perangkat Lunak",
         label: "SMK • RPL",
-        title: "Menyusun ide menjadi solusi lewat pemrograman.",
-        desc: "Logika pemrograman, pengembangan web & aplikasi mobile, basis data, dan kerja tim digital dengan proyek nyata.",
-        perks: ["Web development", "Mobile app", "Database"],
+        title: "Menyusun ide menjadi solusi lewat pemrograman dan AI.",
+        desc: "Pemrograman web & aplikasi, hingga AI & Machine Learning, Data Science, NLP, Computer Vision, AI Apps, dan IoT Robotics — dilengkapi materi industri dan sertifikasi internasional.",
+        perks: ["Web & aplikasi", "AI & Machine Learning", "Data Science", "IoT Robotics"],
         stamp: "Think. Code. Build.",
         image: "/foto/coding-laptop.jpg",
       },
       {
-        tab: "Teknik Komputer & Jaringan",
-        label: "SMK • TKJ",
-        title: "Memahami koneksi yang menggerakkan dunia digital.",
-        desc: "Perakitan komputer, jaringan, server, cloud, dan dasar keamanan siber melalui praktik di lab jaringan.",
-        perks: ["Networking", "Server & cloud", "Cyber security"],
-        stamp: "Connect & Secure.",
-        image: u("photo-1558494949-ef010cbdcc31", 850),
+        tab: "Akademik Terpadu",
+        label: "SMK • AKADEMIK",
+        title: "Kurikulum nasional berpadu nilai-nilai Islam.",
+        desc: "Mata pelajaran umum dengan integrasi nilai keislaman, pendampingan belajar malam, serta kesempatan magang di PT Telkom atau PT Peruri sebagai bekal kerja dan kuliah.",
+        perks: ["Kurikulum nasional", "Magang industri", "Siap kerja & kuliah"],
+        stamp: "Ready for the Future.",
+        image: "/foto/rakit-robot.jpg",
       },
       {
-        tab: "IoT & Robotika",
-        label: "SMK • IOT & ROBOTIKA",
-        title: "Membuat teknologi bergerak dan merespons dunia nyata.",
-        desc: "Sensor, mikrokontroler, ESP32, robotika, dan Internet of Things melalui proyek yang bisa langsung diuji dan dilombakan.",
-        perks: ["Sensor & ESP32", "Internet of Things", "Robotics"],
-        stamp: "Build & Innovate.",
-        image: "/foto/rakit-robot.jpg",
+        tab: "Tahfidz & Diniyyah",
+        label: "SMK • TAHFIDZ",
+        title: "Tetap dekat dengan Al-Qur'an di tengah teknologi.",
+        desc: "Setoran hafalan harian, tahsin, serta kajian aqidah, fiqih, dan adab yang dibimbing langsung oleh musyrif.",
+        perks: ["Target hafalan", "Tahsin", "Kajian diniyyah"],
+        stamp: "Qur'an First.",
+        image: u("photo-1585036156171-384164a8c675", 850),
       },
     ],
   },
@@ -326,16 +326,16 @@ export const testimonials = [
 ];
 
 export const news = [
-  { date: "2026-10-20", dateLabel: "20 Okt 2026", category: "Prestasi", title: "Tim Robotik CIT Raih Juara 2 Lomba Robot Tingkat Provinsi", excerpt: "Santri SMK jurusan IoT & Robotika berhasil membawa pulang medali perak dalam kategori line follower.", image: u("photo-1561557944-6e7860d1a7eb", 750) },
+  { date: "2026-10-20", dateLabel: "20 Okt 2026", category: "Prestasi", title: "Tim Robotik CIT Raih Juara 2 Lomba Robot Tingkat Provinsi", excerpt: "Santri SMK berhasil membawa pulang medali perak dalam kategori line follower.", image: u("photo-1561557944-6e7860d1a7eb", 750) },
   { date: "2026-10-12", dateLabel: "12 Okt 2026", category: "PPDB", title: "PPDB 2027/2028 Gelombang 1 Resmi Dibuka", excerpt: "Pendaftaran santri baru (putra) jenjang SMP dan SMK dibuka Oktober–Desember 2026 dengan promo uang pangkal dan SPP.", image: u("photo-1427504494785-3a9ca7044f45", 750) },
   { date: "2026-10-03", dateLabel: "3 Okt 2026", category: "Kegiatan", title: "Wisuda Tahfidz Angkatan Ke-5", excerpt: "Sebanyak 42 santri menuntaskan target hafalan dan diwisuda di hadapan orang tua.", image: u("photo-1609599006353-e629aaabfeae", 750) },
 ];
 
 export const faqs = [
-  { q: "Apa yang menjadi fokus pembelajaran CIT?", a: "Perpaduan pendidikan teknologi (coding, jaringan, IoT & robotika), program tahfidz dan diniyah, serta pembinaan karakter dan kemandirian dalam kehidupan berasrama." },
+  { q: "Apa yang menjadi fokus pembelajaran CIT?", a: "Perpaduan pendidikan teknologi (pemrograman, AI, Data Science, IoT & robotika), program tahfidz dan diniyyah, serta pembinaan karakter dan kemandirian dalam kehidupan berasrama." },
   { q: "Apakah sekolah ini menerima santri putri?", a: "Saat ini CIT Manahilul Ilmi khusus menerima santri putra untuk jenjang SMP dan SMK." },
   { q: "Apakah semua santri wajib tinggal di asrama?", a: "Ya. Seluruh santri tinggal di asrama putra yang dilengkapi ranjang, kasur, dan lemari, dengan makan 3x sehari dan laundry 2x sepekan." },
-  { q: "Jurusan apa saja yang tersedia di SMK?", a: "Rekayasa Perangkat Lunak (RPL), Teknik Komputer & Jaringan (TKJ), serta IoT & Robotika." },
+  { q: "Jurusan apa saja yang tersedia di SMK?", a: "Saat ini SMK membuka satu jurusan, yaitu Rekayasa Perangkat Lunak (RPL), dengan materi AI & Machine Learning, Data Science, NLP, Computer Vision, AI Apps, dan IoT Robotics. Santri SMK juga mengikuti program akademik terpadu serta tahfidz & diniyyah." },
   { q: "Berapa biaya masuk dan SPP bulanan?", a: "Promo Gelombang 1: uang pangkal SMP Rp13 juta (normal Rp15 juta) dan SMK Rp15 juta (normal Rp20 juta); SPP SMP Rp1,5 juta/bulan (normal Rp2 juta) dan SMK Rp2 juta/bulan (normal Rp2,5 juta). Uang pangkal bisa dicicil dan tersedia keringanan biaya." },
   { q: "Apakah menerima murid pindahan?", a: "Ya, sekolah menerima murid pindahan. Hubungi admin PPDB untuk informasi persyaratannya." },
   { q: "Kapan orang tua bisa menjenguk santri?", a: "Kunjungan dapat dilakukan pada jadwal kunjungan yang ditetapkan asrama, umumnya satu kali dalam sebulan." },
@@ -345,7 +345,5 @@ export const faqs = [
 export const programOptions = [
   "SMP IT Boarding",
   "SMK — Rekayasa Perangkat Lunak",
-  "SMK — Teknik Komputer & Jaringan",
-  "SMK — IoT & Robotika",
   "Belum tahu, ingin konsultasi",
 ];
