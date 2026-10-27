@@ -177,13 +177,22 @@ export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }
         image: "/foto/coding-laptop.jpg",
       },
       {
+        tab: "IoT & Robotika",
+        label: "SMK • IOT & ROBOTIKA",
+        title: "Membuat teknologi bergerak dan merespons dunia nyata.",
+        desc: "Sensor, mikrokontroler, ESP32, robotika, dan Internet of Things melalui proyek yang bisa langsung diuji dan dilombakan.",
+        perks: ["Sensor & ESP32", "Internet of Things", "Robotics"],
+        stamp: "Build & Innovate.",
+        image: "/foto/rakit-robot.jpg",
+      },
+      {
         tab: "Akademik Terpadu",
         label: "SMK • AKADEMIK",
         title: "Kurikulum nasional berpadu nilai-nilai Islam.",
         desc: "Mata pelajaran umum dengan integrasi nilai keislaman, pendampingan belajar malam, serta kesempatan magang di PT Telkom atau PT Peruri sebagai bekal kerja dan kuliah.",
         perks: ["Kurikulum nasional", "Magang industri", "Siap kerja & kuliah"],
         stamp: "Ready for the Future.",
-        image: "/foto/rakit-robot.jpg",
+        image: "/foto/kelas-presentasi.jpg",
       },
       {
         tab: "Tahfidz & Diniyyah",
