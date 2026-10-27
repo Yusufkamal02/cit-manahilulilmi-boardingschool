@@ -8,6 +8,7 @@ import {
   faqs,
   fees,
   ppdbSteps,
+  school,
   programs,
   testimonials,
   workFilters,
@@ -87,7 +88,7 @@ export function Programs() {
           </LeadButton>
         </div>
         <div className="program-visual">
-          <Image key={p.image} src={p.image} alt={`Ilustrasi program ${p.tab}`} fill sizes="(max-width: 620px) 100vw, 560px" />
+          <Image key={p.image} src={p.image} alt={`Program ${p.tab}`} fill sizes="(max-width: 620px) 100vw, 560px" />
           <div className="program-stamp anim-in" key={p.stamp}>
             <b>{p.stamp}</b>
             <small>Project-based education</small>
@@ -272,10 +273,9 @@ export function Works() {
 export function Fees() {
   const [idx, setIdx] = useState(0);
   const f = fees[idx];
-  const total = (k: "smp" | "smk") => f.rows.reduce((s, r) => s + r[k], 0);
   return (
     <div className="fee-panel reveal from-right">
-      <div className="fee-tabs" role="tablist" aria-label="Rincian biaya" style={{ "--idx": idx } as React.CSSProperties}>
+      <div className="fee-tabs" role="tablist" aria-label="Rincian biaya" style={{ "--idx": idx, "--n": fees.length } as React.CSSProperties}>
         <span className="thumb" aria-hidden="true" />
         {fees.map((x, i) => (
           <button key={x.tab} type="button" role="tab" className="fee-tab" aria-selected={idx === i} onClick={() => setIdx(i)}>
@@ -284,7 +284,7 @@ export function Fees() {
         ))}
       </div>
       <div className="fee-content" role="tabpanel" key={f.tab}>
-        <span className="fee-pill anim-in">NOMINAL CONTOH • TA 2027/2028</span>
+        <span className="fee-pill anim-in">PROMO GELOMBANG 1 • TA {school.ppdbYear}</span>
         <h3 className="anim-in" style={{ animationDelay: "50ms" }}>
           {f.title}
         </h3>
@@ -294,29 +294,25 @@ export function Fees() {
         <table className="fee-table anim-in" style={{ animationDelay: "150ms" }}>
           <thead>
             <tr>
-              <th scope="col">KOMPONEN</th>
-              <th scope="col">SMP</th>
-              <th scope="col">SMK</th>
+              <th scope="col">JENJANG</th>
+              <th scope="col">NORMAL</th>
+              <th scope="col">PROMO GEL. 1</th>
             </tr>
           </thead>
           <tbody>
             {f.rows.map((r) => (
-              <tr key={r.item}>
-                <td>{r.item}</td>
-                <td>{rupiah(r.smp)}</td>
-                <td>{rupiah(r.smk)}</td>
+              <tr key={r.level}>
+                <td>{r.level}</td>
+                <td>
+                  <s>{rupiah(r.normal)}</s>
+                </td>
+                <td className="promo">
+                  {rupiah(r.promo)}
+                  <small>Hemat {rupiah(r.normal - r.promo)}</small>
+                </td>
               </tr>
             ))}
           </tbody>
-          {f.rows.length > 1 && (
-            <tfoot>
-              <tr>
-                <td>Total</td>
-                <td>{rupiah(total("smp"))}</td>
-                <td>{rupiah(total("smk"))}</td>
-              </tr>
-            </tfoot>
-          )}
         </table>
         <ul className="fee-notes anim-in" style={{ animationDelay: "200ms" }}>
           {f.notes.map((n) => (

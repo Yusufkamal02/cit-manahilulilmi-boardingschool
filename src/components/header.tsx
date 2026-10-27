@@ -12,7 +12,7 @@ export function Brand({ footer = false }: { footer?: boolean }) {
       <Image className="brand-logo" src="/assets/logo-cit-symbol.png" alt="" width={285} height={191} priority={!footer} />
       <span className="brand-text">
         <span className="brand-name">
-          CIT <span>Manahilulilmi</span>
+          CIT <span>Manahilul Ilmi</span>
         </span>
         <span className="brand-tag">
           BOARDING SCHOOL <i>•</i> {school.levels}

@@ -85,7 +85,7 @@ export function LeadModal() {
       v("message") && `Pertanyaan: ${v("message")}`,
     ].filter(Boolean);
     const text = [
-      "Assalamu'alaikum, Admin PPDB CIT Manahilulilmi.",
+      "Assalamu'alaikum, Admin PPDB CIT Manahilul Ilmi.",
       "Saya ingin informasi pendaftaran santri baru.",
       "",
       ...details,

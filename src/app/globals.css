@@ -1,5 +1,5 @@
 /* =========================================================
-   CIT Manahilulilmi — design tokens
+   CIT Manahilul Ilmi — design tokens
    Berdasarkan desain di Web_Design_Public_Access, dengan
    varian gelap. Tema dipilih lewat [data-theme] di <html>.
    ========================================================= */
@@ -676,14 +676,14 @@ p { text-wrap: pretty }
 .fee-promise strong { font-size: 13px }
 .fee-promise p { font-size: 12px; color: var(--text-muted); margin: 5px 0 0; line-height: 1.6 }
 .fee-panel { background: var(--surface); border-radius: 23px; padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border) }
-.fee-tabs { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; background: var(--surface-2); border-radius: 12px; padding: 4px }
+.fee-tabs { position: relative; display: grid; grid-template-columns: repeat(var(--n, 3), 1fr); gap: 0; background: var(--surface-2); border-radius: 12px; padding: 4px }
 .fee-tab {
   position: relative; z-index: 1; border: 0; border-radius: 9px; background: transparent; color: var(--text-muted);
   padding: 12px 6px; font-size: 12px; font-weight: 800; transition: color .3s;
 }
 .fee-tab[aria-selected="true"] { color: #fff }
 .fee-tabs .thumb {
-  position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc((100% - 8px) / 3); border-radius: 9px;
+  position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc((100% - 8px) / var(--n, 3)); border-radius: 9px;
   background: var(--chip-active); transition: transform .45s var(--ease); transform: translateX(calc(var(--idx, 0) * 100%));
 }
 .fee-content { padding: 28px 10px 6px; min-height: 340px }
@@ -695,8 +695,11 @@ p { text-wrap: pretty }
 .fee-table th:first-child { text-align: left }
 .fee-table td { padding: 11px 0; border-top: 1px dashed var(--border); text-align: right; font-variant-numeric: tabular-nums; font-weight: 700 }
 .fee-table td:first-child { text-align: left; color: var(--text-muted); font-weight: 600 }
-.fee-table tfoot td { border-top: 2px solid var(--border-strong); font-weight: 900; color: var(--brand-ink); font-size: 14px; padding-top: 13px }
-.fee-table tfoot td:first-child { color: var(--text) }
+.fee-table td s { color: var(--text-soft); font-weight: 600 }
+.fee-table td.promo { color: var(--brand-ink); font-weight: 900; font-size: 15px }
+.fee-table td.promo small { display: block; margin-top: 3px; font-size: 10.5px; font-weight: 800; color: var(--text-muted) }
+.fee-extras { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px }
+.fee-extras li { padding: 7px 12px; border-radius: 99px; background: var(--brand-soft); color: var(--brand-ink); font-size: 12px; font-weight: 800 }
 .fee-notes { list-style: none; padding: 0; margin: 16px 0 22px; display: grid; gap: 8px }
 .fee-notes li { display: flex; gap: 10px; font-size: 12px; color: var(--text-muted); line-height: 1.5 }
 .fee-notes li::before { content: '✓'; color: var(--brand-ink); font-weight: 900 }

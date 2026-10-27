@@ -9,6 +9,7 @@ import {
   advantages,
   dailySchedule,
   facilities,
+  feeExtras,
   nav,
   news,
   ppdbRequirements,
@@ -29,7 +30,7 @@ export default function Home() {
 
       {school.isPreview && (
         <div className="preview-ribbon" role="note">
-          <b>VERSI PRATINJAU</b> — Seluruh teks, angka, biaya, kontak, dan foto masih contoh, bukan data resmi sekolah.
+          <b>VERSI PRATINJAU</b> — Sebagian teks dan foto masih contoh dan akan diganti dengan data resmi sekolah.
         </div>
       )}
 
@@ -65,7 +66,7 @@ export default function Home() {
         <section className="section" id="keunggulan">
           <div className="container">
             <div className="section-head center reveal">
-              <span className="eyebrow">KENAPA CIT MANAHILULILMI?</span>
+              <span className="eyebrow">KENAPA CIT MANAHILUL ILMI?</span>
               <h2 className="section-title">
                 Lebih dari sekolah.
                 <br />
@@ -96,7 +97,7 @@ export default function Home() {
             <div className="about-layout">
               <div className="about-image-wrap reveal from-left">
                 <div className="about-image">
-                  <Image src={about.image} alt="Ilustrasi santri berdiskusi dan belajar bersama" fill sizes="(max-width: 900px) 92vw, 560px" />
+                  <Image src={about.image} alt={about.alt} fill sizes="(max-width: 900px) 92vw, 560px" />
                   <div className="about-caption">
                     <small>OUR LEARNING CULTURE</small>
                     <b>
@@ -259,17 +260,21 @@ export default function Home() {
               <span className="eyebrow">INVESTASI PENDIDIKAN</span>
               <h2 className="section-title">Langkah awal untuk masa depan yang lebih besar.</h2>
               <p className="fee-description">
-                Rincian biaya pendaftaran, uang pangkal, dan SPP bulanan untuk jenjang SMP dan SMK. SPP sudah termasuk asrama dan makan 3 kali
-                sehari.
+                Uang pangkal sudah termasuk asrama (ranjang, kasur, lemari), 3 seragam, buku, dan berbagai fasilitas. SPP bulanan sudah termasuk
+                makan 3x sehari dan laundry pakaian 2x sepekan.
               </p>
+              <ul className="fee-extras">
+                {feeExtras.map((x) => (
+                  <li key={x}>✓ {x}</li>
+                ))}
+              </ul>
               <div className="fee-promise">
                 <span aria-hidden="true">💬</span>
                 <div>
-                  <strong>Butuh skema cicilan atau info beasiswa?</strong>
+                  <strong>Butuh skema cicilan atau keringanan biaya?</strong>
                   <p>Tim admisi siap membantu menjelaskan pilihan pembayaran yang sesuai untuk keluarga Anda.</p>
                 </div>
               </div>
-              <span className="pill-note">ⓘ Nominal masih contoh dan akan diperbarui sesuai ketetapan yayasan.</span>
             </div>
             <Fees />
           </div>
@@ -312,7 +317,7 @@ export default function Home() {
               </div>
               <div className="ppdb-cta reveal from-right">
                 <h3>Siap bergabung?</h3>
-                <p>Daftarkan putra-putri Anda sekarang dan dapatkan diskon uang pangkal Gelombang 1. Kuota setiap jurusan terbatas.</p>
+                <p>Daftarkan putra Anda sekarang dan dapatkan promo uang pangkal & SPP Gelombang 1. Kuota terbatas.</p>
                 <div className="btns">
                   <LeadButton>
                     Daftar Sekarang <span className="arrow">↗</span>
@@ -413,11 +418,11 @@ export default function Home() {
                     <b>{school.phone}</b>
                   </div>
                 </a>
-                <a className="contact-item reveal" style={i(3)} href={`mailto:${school.email}`}>
-                  <span className="ico" aria-hidden="true">✉️</span>
+                <a className="contact-item reveal" style={i(3)} href={school.website} target="_blank" rel="noopener noreferrer">
+                  <span className="ico" aria-hidden="true">🌐</span>
                   <div>
-                    <small>Email</small>
-                    <b>{school.email}</b>
+                    <small>Website</small>
+                    <b>{school.websiteDisplay}</b>
                   </div>
                 </a>
                 <div className="contact-item reveal" style={i(4)}>
@@ -507,7 +512,9 @@ export default function Home() {
               <a href={`https://wa.me/${school.whatsapp}`} target="_blank" rel="noopener noreferrer">
                 WA {school.whatsappDisplay}
               </a>
-              <a href={`mailto:${school.email}`}>{school.email}</a>
+              <a href={school.website} target="_blank" rel="noopener noreferrer">
+                {school.websiteDisplay}
+              </a>
             </div>
           </div>
           <div className="footer-bottom">

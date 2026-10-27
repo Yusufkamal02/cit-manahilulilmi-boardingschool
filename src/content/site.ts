@@ -1,27 +1,31 @@
 // Seluruh konten website publik.
-// CATATAN: semua teks, angka, nominal, kontak, dan foto di file ini adalah CONTOH
-// dan harus diganti dengan data resmi sekolah sebelum dipublikasikan.
+// Data resmi (dari poster & info PPDB 2027/2028): identitas, kontak, alamat, peta, biaya,
+// gelombang PPDB, keunggulan, dan fasilitas. Sisanya (program/jurusan, ekskul, jadwal,
+// karya, testimoni, berita, visi-misi, sebagian foto) masih CONTOH dan harus diganti.
 // Nantinya konten ini dipindahkan ke CMS agar bisa diubah tanpa menyentuh kode.
 
 export const school = {
   // true selama data masih contoh: menampilkan pita "Versi Pratinjau" dan
   // melarang mesin pencari mengindeks website. Ubah ke false saat data resmi siap.
   isPreview: true,
-  name: "CIT Manahilulilmi",
-  fullName: "SMP-SMK CIT Manahilulilmi Boarding School",
+  name: "CIT Manahilul Ilmi",
+  fullName: "SMP-SMK CIT Manahilul Ilmi Boarding School",
   tagline: "BOARDING SCHOOL",
   levels: "SMP • SMK",
   ppdbYear: "2027/2028",
-  // Nomor WhatsApp admin PPDB (format internasional, tanpa +). CONTOH.
-  whatsapp: "6281234567890",
-  whatsappDisplay: "0812-3456-7890",
-  phone: "(021) 1234-5678",
-  email: "info@cit-manahilulilmi.sch.id",
-  address: "Jl. Contoh Pendidikan No. 1, Kecamatan Contoh, Kabupaten Contoh, Jawa Barat 12345",
+  // Nomor WhatsApp admin PPDB (format internasional, tanpa +).
+  whatsapp: "6281292598618",
+  whatsappDisplay: "0812-9259-8618",
+  // Nomor kedua (dari poster PPDB).
+  phone: "0812-1982-0431",
+  website: "https://manahilulilmi.or.id",
+  websiteDisplay: "manahilulilmi.or.id",
+  address: "Kp. Mulyasari, Desa Karyasari, RT 01/RW 03, Kec. Leuwiliang, Kabupaten Bogor, Jawa Barat 16640",
+  // CONTOH — belum ada data resmi.
   officeHours: "Senin–Sabtu, 08.00–16.00 WIB",
-  // Isi dengan URL embed Google Maps lokasi sekolah (Bagikan → Sematkan peta → salin src).
-  mapsEmbedUrl: "",
-  mapsLink: "https://maps.google.com",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=SMK+TI+CIT+BOARDING+SCHOOL+MANAHILUL+ILMI,+Karyasari,+Leuwiliang,+Bogor&z=15&output=embed",
+  mapsLink: "https://maps.app.goo.gl/YMXJ1t3X3tV1k1Xt5",
   socials: [
     { label: "Instagram", short: "ig", href: "https://instagram.com" },
     { label: "YouTube", short: "▶", href: "https://youtube.com" },
@@ -41,6 +45,7 @@ export const nav = [
   { href: "#kontak", label: "Kontak" },
 ];
 
+// Foto contoh dari Unsplash; foto asli sekolah ada di public/foto/.
 const u = (id: string, w = 1100) => `https://images.unsplash.com/${id}?w=${w}&q=82&fit=crop`;
 
 export const heroSlides = [
@@ -48,11 +53,11 @@ export const heroSlides = [
     title: "Berilmu dan berkarakter.",
     accent: "Siap berkarya.",
     description:
-      "Bersama CIT Manahilulilmi Boarding School, jelajahi pendidikan teknologi, pembelajaran praktik, dan pembinaan karakter dalam suasana berasrama.",
+      "Bersama CIT Manahilul Ilmi Boarding School, jelajahi pendidikan teknologi, pembelajaran praktik, dan pembinaan karakter dalam suasana berasrama.",
     label: "Learn. Build. Grow.",
     mini: "BELAJAR • TUMBUH • BERKARYA",
-    image: u("photo-1509062522246-3755977927d7"),
-    alt: "Ilustrasi pelajar di lingkungan sekolah",
+    image: "/foto/santri-berseragam.jpg",
+    alt: "Santri CIT Manahilul Ilmi berseragam berdiri di depan banner sekolah",
   },
   {
     title: "Berani mencoba.",
@@ -61,8 +66,8 @@ export const heroSlides = [
       "Eksplorasi coding, IoT, dan robotika melalui pembelajaran berbasis proyek yang mengubah rasa ingin tahu menjadi karya nyata.",
     label: "Make Ideas Happen.",
     mini: "PROJECT BASED LEARNING",
-    image: u("photo-1516321318423-f06f85e504b3"),
-    alt: "Ilustrasi siswa berkolaborasi di depan komputer",
+    image: "/foto/santri-coding-lab.jpg",
+    alt: "Santri belajar pemrograman di lab komputer",
   },
   {
     title: "Tumbuh mandiri.",
@@ -71,36 +76,38 @@ export const heroSlides = [
       "Kehidupan berasrama 24 jam membangun kedisiplinan, kecintaan pada Al-Qur'an, kerja sama, dan kepedulian dalam keseharian.",
     label: "Grow With Purpose.",
     mini: "BOARDING & CHARACTER",
-    image: u("photo-1523240795612-9a054b0db644"),
-    alt: "Ilustrasi siswa belajar bersama",
+    image: "/foto/asrama-santri.jpg",
+    alt: "Deretan bangunan asrama santri berlatar perbukitan",
   },
 ];
 
 export const ticker = [
-  "CODING & DIGITAL SKILLS",
-  "IOT & ROBOTICS",
-  "TAHFIDZ AL-QUR'AN",
-  "LEADERSHIP & CHARACTER",
-  "BOARDING LIFE 24 JAM",
-  "CREATIVE ENTREPRENEURSHIP",
+  "AI & MACHINE LEARNING",
+  "DATA SCIENCE",
+  "COMPUTER VISION",
+  "IOT ROBOTICS",
+  "SERTIFIKASI INTERNASIONAL",
+  "DINIYYAH & TAHFIDZ",
+  "BOARDING PUTRA",
 ];
 
 export const advantages = [
-  { icon: "💻", title: "Teknologi Masa Depan", text: "Eksplorasi pemrograman, robotika, IoT, dan keterampilan digital melalui aktivitas belajar yang aplikatif." },
-  { icon: "📖", title: "Qur'ani & Berakhlak", text: "Program tahfidz, kajian diniyah, dan pembiasaan ibadah harian sebagai fondasi karakter santri." },
-  { icon: "🏠", title: "Kehidupan Berasrama", text: "Lingkungan berasrama sebagai ruang melatih kemandirian, kebiasaan baik, dan kepedulian." },
-  { icon: "🛠️", title: "Belajar Lewat Proyek", text: "Bukan hanya teori. Siswa merancang, membangun, menguji, dan mempresentasikan karyanya." },
-  { icon: "✨", title: "Mentor Inspiratif", text: "Pendampingan guru dan musyrif yang mendorong rasa ingin tahu, kolaborasi, dan belajar mandiri." },
-  { icon: "🤝", title: "Komunitas Positif", text: "Lingkungan aman dan suportif untuk bertumbuh, bereksperimen, dan berani mencoba hal baru." },
+  { icon: "🤖", title: "Kurikulum AI & Teknologi", text: "RPL, AI & Machine Learning, Data Science, NLP, Computer Vision, AI Apps, dan IoT Robotics." },
+  { icon: "📖", title: "Diniyyah & Tahfidz", text: "Pendidikan diniyyah dan kelas tahfidz sebagai fondasi akhlak dan kecintaan pada Al-Qur'an." },
+  { icon: "🏭", title: "Terhubung ke Industri", text: "Guru berpengalaman dengan koneksi industri, materi industri, dan kesempatan magang di PT Telkom atau PT Peruri." },
+  { icon: "🎓", title: "Sertifikasi Internasional", text: "Berbagai sertifikasi internasional untuk bekal siap kerja, siap kuliah, atau kerja sambil kuliah." },
+  { icon: "🌳", title: "Lahan Seluas 5 Hektar", text: "Kampus luas yang nyaman untuk belajar, termasuk kelas outdoor di pendopo dan lapangan olahraga." },
+  { icon: "🏠", title: "Asrama Putra Lengkap", text: "Ranjang, kasur, lemari, makan 3x sehari, dan laundry pakaian 2x sepekan." },
 ];
 
 export const about = {
-  image: u("photo-1523240795612-9a054b0db644", 950),
+  image: "/foto/masjid.jpg",
+  alt: "Masjid CIT Manahilul Ilmi",
   points: ["Pembelajaran teknologi", "Tahfidz & diniyah", "Kehidupan berasrama", "Karya & portofolio"],
   stats: [
     { value: 2, suffix: "", label: "Jenjang" },
-    { value: 3, suffix: "", label: "Jurusan SMK" },
-    { value: 15, suffix: "+", label: "Ekstrakurikuler" },
+    { value: 5, suffix: " ha", label: "Luas lahan" },
+    { value: 10, suffix: "+", label: "Fasilitas" },
     { value: 24, suffix: " jam", label: "Pembinaan asrama" },
   ],
   vision:
@@ -136,7 +143,7 @@ export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }
         desc: "Pembelajaran akademik yang kuat dengan kelas kecil, pendampingan belajar malam, dan integrasi nilai keislaman di setiap mata pelajaran.",
         perks: ["Kurikulum Merdeka", "Kelas kecil", "Belajar malam terbimbing"],
         stamp: "Strong Foundation.",
-        image: u("photo-1503676260728-1c00da094a0b", 850),
+        image: "/foto/kelas-presentasi.jpg",
       },
       {
         tab: "Tahfidz & Diniyah",
@@ -154,7 +161,7 @@ export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }
         desc: "Pengenalan computational thinking, pemrograman blok hingga Python dasar, dan proyek robotik sederhana yang menyenangkan.",
         perks: ["Computational thinking", "Python dasar", "Robotik pemula"],
         stamp: "Think. Code. Play.",
-        image: u("photo-1581092921461-eab62e97a780", 850),
+        image: "/foto/santri-komputer.jpg",
       },
     ],
   },
@@ -169,7 +176,7 @@ export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }
         desc: "Logika pemrograman, pengembangan web & aplikasi mobile, basis data, dan kerja tim digital dengan proyek nyata.",
         perks: ["Web development", "Mobile app", "Database"],
         stamp: "Think. Code. Build.",
-        image: u("photo-1498050108023-c5249f4df085", 850),
+        image: "/foto/coding-laptop.jpg",
       },
       {
         tab: "Teknik Komputer & Jaringan",
@@ -187,7 +194,7 @@ export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }
         desc: "Sensor, mikrokontroler, ESP32, robotika, dan Internet of Things melalui proyek yang bisa langsung diuji dan dilombakan.",
         perks: ["Sensor & ESP32", "Internet of Things", "Robotics"],
         stamp: "Build & Innovate.",
-        image: u("photo-1485827404703-89b55fcc595e", 850),
+        image: "/foto/rakit-robot.jpg",
       },
     ],
   },
@@ -195,11 +202,11 @@ export const programs: { level: "SMP" | "SMK"; intro: string; items: Program[] }
 
 export const activities = [
   { tag: "01 / CHARACTER BUILDING", title: "Leadership & Adventure Camp", text: "Belajar kepemimpinan, kerja tim, dan ketangguhan melalui pengalaman di alam.", image: "photo-1500534623283-312aade485b7" },
-  { tag: "02 / TECHNOLOGY", title: "Tech & Innovation Lab", text: "Eksperimen dan prototipe di laboratorium teknologi.", image: "photo-1532094349884-543bc11b234d" },
-  { tag: "03 / COMMUNITY", title: "Community & Sharing", text: "Berbagi ilmu dan pengabdian kepada masyarakat.", image: "photo-1523580494863-6f3031224c94" },
+  { tag: "02 / TECHNOLOGY", title: "Tech & Innovation Lab", text: "Eksperimen dan prototipe di laboratorium teknologi.", image: "/foto/lab-iot.jpg" },
+  { tag: "03 / COMMUNITY", title: "Community & Sharing", text: "Berbagi ilmu dan pengabdian kepada masyarakat.", image: "/foto/acara-bersama.jpg" },
   { tag: "04 / ENTREPRENEURSHIP", title: "Entrepreneurship Day", text: "Mengasah jiwa wirausaha lewat bazar dan pitching ide.", image: "photo-1552664730-d307ca884978" },
   { tag: "05 / SPIRITUAL", title: "Qiyamul Lail & Kajian", text: "Pembiasaan ibadah dan kajian bersama di asrama.", image: "photo-1585036156171-384164a8c675" },
-].map((a) => ({ ...a, thumb: u(a.image, 820), full: u(a.image, 1400) }));
+].map((a) => (a.image.startsWith("/") ? { ...a, thumb: a.image, full: a.image } : { ...a, thumb: u(a.image, 820), full: u(a.image, 1400) }));
 
 export const extracurriculars = [
   { icon: "🤖", name: "Robotik", group: "Teknologi" },
@@ -221,14 +228,18 @@ export const extracurriculars = [
 ];
 
 export const facilities = [
-  { icon: "🏠", title: "Asrama Putra & Putri", text: "Kamar nyaman terpisah, didampingi musyrif/musyrifah 24 jam." },
-  { icon: "🖥️", title: "Lab Komputer", text: "Perangkat untuk pemrograman, desain, dan multimedia." },
-  { icon: "🔌", title: "Lab IoT & Robotika", text: "Kit mikrokontroler, sensor, dan arena uji robot." },
-  { icon: "🌐", title: "Lab Jaringan", text: "Perangkat jaringan dan server untuk praktik TKJ." },
-  { icon: "🕌", title: "Masjid", text: "Pusat ibadah, halaqah tahfidz, dan kajian." },
-  { icon: "🍱", title: "Dapur & Ruang Makan", text: "Makan 3x sehari dengan menu bergizi." },
-  { icon: "🩺", title: "Klinik Kesehatan", text: "Layanan kesehatan dasar untuk santri." },
-  { icon: "⚽", title: "Lapangan Olahraga", text: "Futsal, panahan, dan area kegiatan luar ruang." },
+  { icon: "🕌", title: "Masjid", text: "Pusat ibadah berjamaah, kajian, dan halaqah tahfidz." },
+  { icon: "🏠", title: "Asrama Santri", text: "Asrama putra dengan ranjang, kasur, dan lemari untuk setiap santri." },
+  { icon: "🏫", title: "Ruang Kelas", text: "Ruang belajar indoor untuk kegiatan akademik harian." },
+  { icon: "⛩️", title: "Kelas Outdoor (Pendopo)", text: "Ruang belajar terbuka di tengah lahan kampus yang asri." },
+  { icon: "🖥️", title: "Lab Komputer", text: "Lab komputer dengan akses Wi-Fi untuk praktik teknologi." },
+  { icon: "⚽", title: "Lapangan Olahraga", text: "Lapangan futsal, basket, dan badminton." },
+  { icon: "📚", title: "Perpustakaan", text: "Koleksi buku untuk menunjang belajar dan literasi santri." },
+  { icon: "🍱", title: "Makan & Laundry", text: "Makan 3x sehari dan laundry pakaian 2x sepekan (termasuk SPP)." },
+  { icon: "🩺", title: "Pos Kesehatan", text: "Layanan kesehatan dasar untuk santri." },
+  { icon: "🛡️", title: "Pos Keamanan", text: "Penjagaan lingkungan sekolah dan asrama." },
+  { icon: "🏢", title: "Ruang Kantor", text: "Layanan administrasi sekolah dan PPDB." },
+  { icon: "🛏️", title: "Guest House", text: "Tempat menginap bagi orang tua yang berkunjung." },
 ];
 
 export const dailySchedule = [
@@ -258,46 +269,36 @@ export const workFilters = [
   { key: "design", label: "Design" },
 ];
 
-// Nominal CONTOH — wajib diganti dengan nominal resmi.
+// Harga resmi PPDB 2027/2028. Harga promo berlaku untuk pendaftar Gelombang 1.
 export const fees = [
   {
-    tab: "Pendaftaran",
-    title: "Biaya Pendaftaran",
-    desc: "Dibayar saat mendaftar, untuk formulir dan rangkaian tes seleksi.",
-    rows: [
-      { item: "Formulir & tes seleksi", smp: 350_000, smk: 350_000 },
-    ],
-    notes: ["Tes akademik, baca Al-Qur'an, minat IT, dan wawancara", "Tidak dapat dikembalikan"],
-  },
-  {
     tab: "Uang Pangkal",
-    title: "Biaya Masuk (Uang Pangkal)",
-    desc: "Dibayar sekali saat daftar ulang. Dapat dicicil sesuai ketentuan.",
+    title: "Uang Pangkal",
+    desc: "Dibayar sekali saat daftar ulang dan bisa dicicil.",
     rows: [
-      { item: "Uang gedung & fasilitas", smp: 8_000_000, smk: 9_000_000 },
-      { item: "Perlengkapan asrama", smp: 2_000_000, smk: 2_000_000 },
-      { item: "Seragam (5 stel)", smp: 1_500_000, smk: 1_750_000 },
-      { item: "Kegiatan awal tahun", smp: 1_000_000, smk: 1_250_000 },
+      { level: "SMP", normal: 15_000_000, promo: 13_000_000 },
+      { level: "SMK", normal: 20_000_000, promo: 15_000_000 },
     ],
-    notes: ["Diskon untuk pendaftar Gelombang 1", "Bisa dicicil hingga 3 kali"],
+    notes: ["Termasuk asrama (ranjang, kasur, lemari), 3 seragam, buku, dan berbagai fasilitas lainnya", "Uang pangkal bisa dicicil"],
   },
   {
     tab: "SPP Bulanan",
     title: "SPP Bulanan",
-    desc: "Dibayar setiap bulan, sudah termasuk pendidikan dan kebutuhan asrama.",
+    desc: "Dibayar setiap bulan.",
     rows: [
-      { item: "Pendidikan & pembinaan", smp: 1_200_000, smk: 1_400_000 },
-      { item: "Asrama & makan 3x sehari", smp: 1_300_000, smk: 1_300_000 },
-      { item: "Laundry & kesehatan", smp: 200_000, smk: 200_000 },
+      { level: "SMP", normal: 2_000_000, promo: 1_500_000 },
+      { level: "SMK", normal: 2_500_000, promo: 2_000_000 },
     ],
-    notes: ["Dibayar paling lambat tanggal 10", "Tagihan dapat dipantau orang tua lewat portal (segera)"],
+    notes: ["Termasuk makan 3x sehari", "Termasuk laundry pakaian 2x sepekan"],
   },
 ];
 
+export const feeExtras = ["Menerima murid pindahan", "Ada keringanan biaya", "Kuota terbatas"];
+
 export const ppdbWaves = [
-  { name: "Gelombang 1", period: "1 Nov 2026 – 31 Jan 2027", perk: "Diskon uang pangkal 15%", status: "open" as const },
-  { name: "Gelombang 2", period: "1 Feb – 30 Apr 2027", perk: "Diskon uang pangkal 5%", status: "soon" as const },
-  { name: "Gelombang 3", period: "1 Mei – 30 Jun 2027", perk: "Selama kuota tersedia", status: "soon" as const },
+  { name: "Gelombang 1", period: "Oktober – Desember 2026", perk: "Promo uang pangkal & SPP", status: "open" as const },
+  { name: "Gelombang 2", period: "Januari – Maret 2027", perk: "Info biaya: hubungi admin", status: "soon" as const },
+  { name: "Gelombang 3", period: "April – Juni 2027", perk: "Selama kuota tersedia", status: "soon" as const },
 ];
 
 export const ppdbSteps = [
@@ -328,15 +329,17 @@ export const testimonials = [
 
 export const news = [
   { date: "2026-10-20", dateLabel: "20 Okt 2026", category: "Prestasi", title: "Tim Robotik CIT Raih Juara 2 Lomba Robot Tingkat Provinsi", excerpt: "Santri SMK jurusan IoT & Robotika berhasil membawa pulang medali perak dalam kategori line follower.", image: u("photo-1561557944-6e7860d1a7eb", 750) },
-  { date: "2026-10-12", dateLabel: "12 Okt 2026", category: "PPDB", title: "PPDB 2027/2028 Gelombang 1 Resmi Dibuka", excerpt: "Pendaftaran santri baru jenjang SMP dan SMK dibuka mulai 1 November dengan diskon uang pangkal.", image: u("photo-1427504494785-3a9ca7044f45", 750) },
+  { date: "2026-10-12", dateLabel: "12 Okt 2026", category: "PPDB", title: "PPDB 2027/2028 Gelombang 1 Resmi Dibuka", excerpt: "Pendaftaran santri baru (putra) jenjang SMP dan SMK dibuka Oktober–Desember 2026 dengan promo uang pangkal dan SPP.", image: u("photo-1427504494785-3a9ca7044f45", 750) },
   { date: "2026-10-03", dateLabel: "3 Okt 2026", category: "Kegiatan", title: "Wisuda Tahfidz Angkatan Ke-5", excerpt: "Sebanyak 42 santri menuntaskan target hafalan dan diwisuda di hadapan orang tua.", image: u("photo-1609599006353-e629aaabfeae", 750) },
 ];
 
 export const faqs = [
   { q: "Apa yang menjadi fokus pembelajaran CIT?", a: "Perpaduan pendidikan teknologi (coding, jaringan, IoT & robotika), program tahfidz dan diniyah, serta pembinaan karakter dan kemandirian dalam kehidupan berasrama." },
-  { q: "Apakah semua santri wajib tinggal di asrama?", a: "Ya. Seluruh santri SMP dan SMK tinggal di asrama yang terpisah antara putra dan putri, didampingi musyrif/musyrifah." },
+  { q: "Apakah sekolah ini menerima santri putri?", a: "Saat ini CIT Manahilul Ilmi khusus menerima santri putra untuk jenjang SMP dan SMK." },
+  { q: "Apakah semua santri wajib tinggal di asrama?", a: "Ya. Seluruh santri tinggal di asrama putra yang dilengkapi ranjang, kasur, dan lemari, dengan makan 3x sehari dan laundry 2x sepekan." },
   { q: "Jurusan apa saja yang tersedia di SMK?", a: "Rekayasa Perangkat Lunak (RPL), Teknik Komputer & Jaringan (TKJ), serta IoT & Robotika." },
-  { q: "Berapa biaya masuk dan SPP bulanan?", a: "Rincian biaya pendaftaran, uang pangkal, dan SPP bulanan untuk SMP dan SMK dapat dilihat di bagian Biaya Pendidikan. Uang pangkal dapat dicicil." },
+  { q: "Berapa biaya masuk dan SPP bulanan?", a: "Promo Gelombang 1: uang pangkal SMP Rp13 juta (normal Rp15 juta) dan SMK Rp15 juta (normal Rp20 juta); SPP SMP Rp1,5 juta/bulan (normal Rp2 juta) dan SMK Rp2 juta/bulan (normal Rp2,5 juta). Uang pangkal bisa dicicil dan tersedia keringanan biaya." },
+  { q: "Apakah menerima murid pindahan?", a: "Ya, sekolah menerima murid pindahan. Hubungi admin PPDB untuk informasi persyaratannya." },
   { q: "Kapan orang tua bisa menjenguk santri?", a: "Kunjungan dapat dilakukan pada jadwal kunjungan yang ditetapkan asrama, umumnya satu kali dalam sebulan." },
   { q: "Bagaimana cara mendaftar?", a: "Klik tombol Daftar Sekarang, isi data singkat, lalu Anda akan terhubung dengan admin PPDB melalui WhatsApp untuk langkah berikutnya." },
 ];
