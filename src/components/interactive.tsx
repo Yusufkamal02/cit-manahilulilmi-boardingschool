@@ -22,8 +22,18 @@ const rupiah = (n: number) => "Rp" + n.toLocaleString("id-ID");
 export function Programs() {
   const [level, setLevel] = useState(1);
   const [tab, setTab] = useState(0);
+  const tabsRef = useRef<HTMLDivElement>(null);
   const group = programs[level];
   const p = group.items[tab];
+
+  // Di HP deretan tab bisa digeser; tab yang dipilih digeser ke tengah agar tidak terpotong.
+  useEffect(() => {
+    const row = tabsRef.current;
+    const btn = row?.children[tab] as HTMLElement | undefined;
+    if (!row || !btn) return;
+    const offset = btn.getBoundingClientRect().left - row.getBoundingClientRect().left;
+    row.scrollTo({ left: row.scrollLeft + offset - (row.clientWidth - btn.offsetWidth) / 2, behavior: "smooth" });
+  }, [level, tab]);
 
   return (
     <>
@@ -47,7 +57,7 @@ export function Programs() {
       <p className="level-intro anim-in" key={group.level}>
         {group.intro}
       </p>
-      <div className="tabs reveal" role="tablist" aria-label={`Program ${group.level}`}>
+      <div className="tabs reveal" ref={tabsRef} role="tablist" aria-label={`Program ${group.level}`}>
         {group.items.map((item, i) => (
           <button
             key={item.tab}
