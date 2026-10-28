@@ -11,6 +11,8 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(school.website),
+  alternates: { canonical: "/" },
   title: "CIT Manahilul Ilmi Boarding School — SMP & SMK IT, IoT & Robotics",
   description:
     "SMP-SMK CIT Manahilul Ilmi Boarding School: pendidikan teknologi, IoT & robotika, tahfidz, dan pembinaan karakter berasrama. PPDB 2027/2028 telah dibuka.",

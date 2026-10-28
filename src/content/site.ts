@@ -5,9 +5,8 @@
 // Nantinya konten ini dipindahkan ke CMS agar bisa diubah tanpa menyentuh kode.
 
 export const school = {
-  // true selama data masih contoh: menampilkan pita "Versi Pratinjau" dan
-  // melarang mesin pencari mengindeks website. Ubah ke false saat data resmi siap.
-  isPreview: true,
+  // true menampilkan pita "Versi Pratinjau" dan melarang mesin pencari mengindeks website.
+  isPreview: false,
   name: "CIT Manahilul Ilmi",
   fullName: "SMP-SMK CIT Manahilul Ilmi Boarding School",
   tagline: "BOARDING SCHOOL",
@@ -18,6 +17,9 @@ export const school = {
   whatsappDisplay: "0812-9259-8618",
   // Nomor kedua (dari poster PPDB).
   phone: "0812-1982-0431",
+  // Domain sementara sampai domain .sch.id terbit.
+  website: "https://manahilulilmi.com",
+  websiteDisplay: "manahilulilmi.com",
   address: "Kp. Mulyasari, Desa Karyasari, RT 01/RW 03, Kec. Leuwiliang, Kabupaten Bogor, Jawa Barat 16640",
   // CONTOH — belum ada data resmi.
   officeHours: "Senin–Sabtu, 08.00–16.00 WIB",
