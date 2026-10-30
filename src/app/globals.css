@@ -858,12 +858,14 @@ footer { background: var(--deep); color: #cfdbd3; padding: 70px 0 25px }
 .footer-col a, .footer-col p { display: block; font-size: 12px; color: var(--on-deep-muted); line-height: 2.2; margin: 0; transition: color .2s, transform .2s }
 .footer-col a:hover { color: var(--accent); transform: translateX(3px) }
 .footer-bottom { border-top: 1px solid #ffffff1a; margin-top: 55px; padding-top: 21px; display: flex; gap: 18px; justify-content: space-between; color: #7f978a; font-size: 11px }
-.socials { display: flex; gap: 9px; margin-top: 22px }
+/* Ikon brand berwarna di atas plakat putih, agar tetap jelas di footer gelap (mis. logo TikTok yang hitam). */
+.socials { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px }
 .socials a {
-  border: 1px solid #ffffff26; border-radius: 10px; min-width: 40px; height: 40px; display: grid; place-items: center;
-  color: #fff; font-size: 11px; font-weight: 900; transition: .25s;
+  background: #fff; border-radius: 11px; width: 40px; height: 40px; display: grid; place-items: center;
+  box-shadow: 0 0 0 2px transparent; transition: transform .25s var(--ease), box-shadow .25s;
 }
-.socials a:hover { background: var(--accent); color: #143e2f; border-color: var(--accent); transform: translateY(-3px) }
+.socials a img { width: 22px; height: 22px }
+.socials a:hover { transform: translateY(-3px); box-shadow: 0 0 0 2px var(--accent), 0 8px 18px #0005 }
 
 .float-contact {
   position: fixed; bottom: 26px; right: 24px; z-index: 60; display: flex; gap: 9px; align-items: center;

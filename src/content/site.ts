@@ -4,6 +4,9 @@
 // karya, testimoni, berita, visi-misi, sebagian foto) masih CONTOH dan harus diganti.
 // Nantinya konten ini dipindahkan ke CMS agar bisa diubah tanpa menyentuh kode.
 
+// Nomor WhatsApp admin PPDB (format internasional, tanpa +).
+const whatsapp = "6281292598618";
+
 export const school = {
   // true menampilkan pita "Versi Pratinjau" dan melarang mesin pencari mengindeks website.
   isPreview: false,
@@ -12,8 +15,7 @@ export const school = {
   tagline: "BOARDING SCHOOL",
   levels: "SMP • SMK",
   ppdbYear: "2027/2028",
-  // Nomor WhatsApp admin PPDB (format internasional, tanpa +).
-  whatsapp: "6281292598618",
+  whatsapp,
   whatsappDisplay: "0812-9259-8618",
   // Nomor kedua (dari poster PPDB).
   phone: "0812-1982-0431",
@@ -26,11 +28,16 @@ export const school = {
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=SMK+TI+CIT+BOARDING+SCHOOL+MANAHILUL+ILMI,+Karyasari,+Leuwiliang,+Bogor&z=15&output=embed",
   mapsLink: "https://maps.app.goo.gl/YMXJ1t3X3tV1k1Xt5",
+  // Ikon ada di public/assets/.
   socials: [
-    { label: "Instagram", short: "ig", href: "https://instagram.com" },
-    { label: "YouTube", short: "▶", href: "https://youtube.com" },
-    { label: "TikTok", short: "tt", href: "https://tiktok.com" },
-    { label: "Facebook", short: "fb", href: "https://facebook.com" },
+    { label: "Instagram", icon: "/assets/instagram.svg", href: "https://www.instagram.com/aura_analytics/" },
+    { label: "YouTube", icon: "/assets/youtube.svg", href: "https://www.youtube.com/@AuraAnalytics25" },
+    // CONTOH — ganti dengan akun TikTok resmi.
+    { label: "TikTok", icon: "/assets/tiktok.svg", href: "https://tiktok.com" },
+    // CONTOH — ganti dengan halaman Facebook resmi.
+    { label: "Facebook", icon: "/assets/facebook.svg", href: "https://facebook.com" },
+    { label: "LinkedIn", icon: "/assets/linkedin.svg", href: "https://www.linkedin.com/company/aura-analytics-sinergi/" },
+    { label: "WhatsApp", icon: "/assets/whatsapp.svg", href: `https://wa.me/${whatsapp}` },
   ],
 };
 
@@ -86,7 +93,7 @@ export const ticker = [
   "DATA SCIENCE",
   "COMPUTER VISION",
   "IOT ROBOTICS",
-  "SERTIFIKASI INTERNASIONAL",
+  "SERTIFIKASI NASIONAL & INTERNASIONAL",
   "DINIYYAH & TAHFIDZ",
   "SEKOLAH TAHFIDZ 30 JUZ",
   "BOARDING PUTRA",
@@ -96,7 +103,7 @@ export const advantages = [
   { icon: "🤖", title: "Kurikulum AI & Teknologi", text: "RPL, AI & Machine Learning, Data Science, NLP, Computer Vision, AI Apps, dan IoT Robotics." },
   { icon: "📖", title: "Diniyyah & Tahfidz", text: "Pendidikan diniyyah dan kelas tahfidz sebagai fondasi akhlak dan kecintaan pada Al-Qur'an." },
   { icon: "🏭", title: "Terhubung ke Industri", text: "Guru berpengalaman dengan koneksi industri, materi industri, dan kesempatan magang di PT Telkom atau PT Peruri." },
-  { icon: "🎓", title: "Sertifikasi Internasional", text: "Berbagai sertifikasi internasional untuk bekal siap kerja, siap kuliah, atau kerja sambil kuliah." },
+  { icon: "🎓", title: "Miliki kesempatan Sertifikasi", text: "Berbagai sertifikasi nasional dan internasional untuk bekal siap kerja, siap kuliah, atau kerja sambil kuliah." },
   { icon: "🌳", title: "Lahan Seluas 5 Hektar", text: "Kampus luas yang nyaman untuk belajar, termasuk kelas outdoor di pendopo dan lapangan olahraga." },
   { icon: "🏠", title: "Asrama Putra Lengkap", text: "Ranjang, kasur, lemari, makan 3x sehari, dan laundry pakaian 2x sepekan." },
 ];
@@ -259,29 +266,20 @@ export const extracurriculars = [
   { icon: "🎬", name: "Multimedia & Konten", group: "Teknologi" },
   { icon: "📖", name: "Tahfidz Intensif", group: "Keagamaan" },
   { icon: "🎙️", name: "Muhadharah (Pidato)", group: "Keagamaan" },
-  { icon: "🕌", name: "Kaligrafi", group: "Keagamaan" },
-  { icon: "🏹", name: "Panahan", group: "Olahraga" },
   { icon: "⚽", name: "Futsal", group: "Olahraga" },
-  { icon: "🥋", name: "Pencak Silat", group: "Olahraga" },
-  { icon: "🏊", name: "Renang", group: "Olahraga" },
-  { icon: "⛺", name: "Pramuka", group: "Kepemimpinan" },
+  { icon: "🥋", name: "Karate", group: "Olahraga" },
   { icon: "🗣️", name: "English Club", group: "Bahasa" },
-  { icon: "🌙", name: "Arabic Club", group: "Bahasa" },
-  { icon: "💼", name: "Young Entrepreneur", group: "Kepemimpinan" },
 ];
 
 export const facilities = [
   { icon: "🕌", title: "Masjid", text: "Pusat ibadah berjamaah, kajian, dan halaqah tahfidz." },
   { icon: "🏠", title: "Asrama Santri", text: "Asrama putra dengan ranjang, kasur, dan lemari untuk setiap santri." },
-  { icon: "🏫", title: "Ruang Kelas", text: "Ruang belajar indoor untuk kegiatan akademik harian." },
+  { icon: "🏫", title: "Ruang Kelas", text: "Ruang belajar indoor dengan akses wifi untuk kegiatan akademik harian." },
   { icon: "⛩️", title: "Kelas Outdoor (Pendopo)", text: "Ruang belajar terbuka di tengah lahan kampus yang asri." },
-  { icon: "🖥️", title: "Lab Komputer", text: "Lab komputer dengan akses Wi-Fi untuk praktik teknologi." },
   { icon: "⚽", title: "Lapangan Olahraga", text: "Lapangan futsal, basket, dan badminton." },
   { icon: "📚", title: "Perpustakaan", text: "Koleksi buku untuk menunjang belajar dan literasi santri." },
   { icon: "🍱", title: "Makan & Laundry", text: "Makan 3x sehari dan laundry pakaian 2x sepekan (termasuk SPP)." },
-  { icon: "🩺", title: "Pos Kesehatan", text: "Layanan kesehatan dasar untuk santri." },
   { icon: "🛡️", title: "Pos Keamanan", text: "Penjagaan lingkungan sekolah dan asrama." },
-  { icon: "🏢", title: "Ruang Kantor", text: "Layanan administrasi sekolah dan PPDB." },
   { icon: "🛏️", title: "Guest House", text: "Tempat menginap bagi orang tua yang berkunjung." },
 ];
 
@@ -289,7 +287,6 @@ export const dailySchedule = [
   { time: "03.30", title: "Qiyamul lail & Subuh berjamaah" },
   { time: "05.00", title: "Setoran tahfidz" },
   { time: "07.00", title: "Pembelajaran akademik & kejuruan" },
-  { time: "15.30", title: "Ekstrakurikuler" },
   { time: "18.00", title: "Maghrib, kajian & makan malam" },
   { time: "19.30", title: "Belajar malam terbimbing" },
   { time: "21.30", title: "Istirahat" },

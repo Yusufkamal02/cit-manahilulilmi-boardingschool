@@ -470,8 +470,8 @@ export default function Home() {
               </p>
               <div className="socials">
                 {school.socials.map((s) => (
-                  <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
-                    {s.short}
+                  <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} title={s.label}>
+                    <Image src={s.icon} alt="" width={22} height={22} />
                   </a>
                 ))}
               </div>
