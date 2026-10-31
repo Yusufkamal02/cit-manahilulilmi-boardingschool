@@ -1,0 +1,14 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" rx="12" fill="url(#ig_gradient)"/>
+<rect x="10" y="10" width="28" height="28" rx="8" stroke="white" stroke-width="3.2"/>
+<circle cx="24" cy="24" r="6.6" stroke="white" stroke-width="3.2"/>
+<circle cx="32.2" cy="15.8" r="2" fill="white"/>
+<defs>
+<radialGradient id="ig_gradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.75 51.7) rotate(-90) scale(47.6 44.3)">
+<stop stop-color="#FFDD55"/>
+<stop offset="0.1" stop-color="#FFDD55"/>
+<stop offset="0.5" stop-color="#FF543E"/>
+<stop offset="1" stop-color="#C837AB"/>
+</radialGradient>
+</defs>
+</svg>
