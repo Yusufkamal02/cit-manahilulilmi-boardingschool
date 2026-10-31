@@ -30,13 +30,13 @@ export const school = {
   mapsLink: "https://maps.app.goo.gl/YMXJ1t3X3tV1k1Xt5",
   // Ikon ada di public/assets/.
   socials: [
-    { label: "Instagram", icon: "/assets/instagram.svg", href: "https://www.instagram.com/aura_analytics/" },
-    { label: "YouTube", icon: "/assets/youtube.svg", href: "https://www.youtube.com/@AuraAnalytics25" },
+    { label: "Instagram", icon: "/assets/instagram.svg", href: "https://www.instagram.com/smk.ti.cit.manahilulilmi/" },
+    { label: "YouTube", icon: "/assets/youtube.svg", href: "https://www.youtube.com/@manahilulilmiofficial3395" },
     // CONTOH — ganti dengan akun TikTok resmi.
     { label: "TikTok", icon: "/assets/tiktok.svg", href: "https://tiktok.com" },
-    // CONTOH — ganti dengan halaman Facebook resmi.
-    { label: "Facebook", icon: "/assets/facebook.svg", href: "https://facebook.com" },
-    { label: "LinkedIn", icon: "/assets/linkedin.svg", href: "https://www.linkedin.com/company/aura-analytics-sinergi/" },
+    { label: "Facebook", icon: "/assets/facebook.svg", href: "https://www.facebook.com/profile.php?id=61571890350721" },
+    // CONTOH — ganti dengan halaman LinkedIn resmi.
+    { label: "LinkedIn", icon: "/assets/linkedin.svg", href: "https://linkedin.com" },
     { label: "WhatsApp", icon: "/assets/whatsapp.svg", href: `https://wa.me/${whatsapp}` },
   ],
 };
