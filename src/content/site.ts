@@ -367,9 +367,9 @@ export const ppdbRequirements = [
 ];
 
 export const testimonials = [
-  { quote: "Saya menyukai bagaimana pembelajaran tidak berhenti pada teori. Setiap ide didorong menjadi proyek yang nyata.", name: "Contoh Testimoni A", role: "Ilustrasi • Orang tua siswa", letter: "A" },
-  { quote: "Kegiatan kolaboratif memberi siswa kesempatan belajar percaya diri, berkomunikasi, dan menyelesaikan tantangan bersama.", name: "Contoh Testimoni B", role: "Ilustrasi • Pendidik", letter: "B" },
-  { quote: "Ada kebanggaan tersendiri ketika karya yang awalnya hanya ide akhirnya dapat dipresentasikan di depan banyak orang.", name: "Contoh Testimoni C", role: "Ilustrasi • Siswa", letter: "C" },
+  { quote: "Alhamdulillah, terima kasih kepada para asatidz yang telah membimbing anak kami, Firdaus. Dalam waktu sekitar dua bulan saja, sudah terlihat perkembangan yang sangat positif, baik dari segi pemahaman agama maupun penguasaan teknologi [00:41]. Lingkungan pesantren yang asri dan hijau serta pergaulan teman-teman yang suportif sangat membantu tumbuh kembang mental dan karakternya sesuai visi dan misi sekolah", name: "— Firdaus (Wali Siswa)", role: "Ilustrasi • Orang tua siswa", letter: "A" },
+  { quote: "Alhamdulillah, kami merasa tidak salah memilih SMK CIT Manahilul Ilmi Leuwiliang Bogor. Hanya dalam kurun waktu 6 bulan, perkembangan anak kami sangat membanggakan: wawasannya makin luas, kemampuan bahasa Inggrisnya kian terbiasa, hafalan Al-Qur'an dan ilmu agamanya bertambah, serta ibadah dan akhlaknya sehari-hari menjadi jauh lebih baik.", name: "— Siti Romlah Abdulmanan (Wali Siswa)", role: "Ilustrasi • Pendidik", letter: "B" },
+  { quote: "Program Santri Mengajar memberikan dampak yang sangat besar bagi kami. Selain melatih keterampilan public speaking dan rasa percaya diri saat mengajar murid-murid, program ini menjadi sarana mengasah serta memperdalam kembali ilmu teknologi yang telah kami pelajari di SMK CIT Manahilul Ilmi. Pengalaman berharga ini membuat kami kian siap membagikan manfaat kepada masyarakat luas.", name: "— Mochammad Brian Noor Amin (Siswa RPL)", role: "Ilustrasi • Siswa", letter: "C" },
 ];
 
 export const news = [
