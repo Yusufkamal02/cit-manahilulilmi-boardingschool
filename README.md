@@ -12,7 +12,7 @@ npm run build && npm run start   # mode produksi
 
 ## Mengubah konten
 
-Semua teks, angka, biaya, kontak, dan foto ada di **`src/content/site.ts`**.
+Sebagian konten yang ada di **`src/content/site.ts`**.
 Isinya masih **contoh** dan wajib diganti dengan data resmi sebelum dipublikasikan:
 
 - `school.whatsapp`: nomor WhatsApp admin PPDB (format `62…`, tanpa `+`)
